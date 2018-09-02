@@ -101,7 +101,7 @@ public class StringFun{
 			String comparisonString = scan.nextLine();
 			if (subString.equals(comparisonString)){
 				System.out.println("Strings are equal");
-			} else if (subString != comparisonString) {
+			} else if (!subString.equals(comparisonString)) {
 				System.out.println("Strings are not equal");
 			}
 			// s.substring(startIndex, endIndex)
@@ -133,16 +133,20 @@ public class StringFun{
 		}
         }
     }
+
+	/**
+	 *
+	 * @param scanner
+	 * @return
+	 */
 	static int readInt(Scanner scanner) {
 		while(true) {
 			try {
 				System.out.print("Give me an integer: ");
 				String line = scanner.next();
-				int value = Integer.parseInt(line);
-				return value;
+				return Integer.parseInt(line);
 			} catch (NumberFormatException e) {
 				System.out.println("Input not properly formatted!" + e.getMessage());
-				continue;
 			}
 		}
 	}
