@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * We are now about to introduce the public class StringFun. Where we will try nine different methods for three
+ * strings entered to the script through the command line.
+ */
 public class StringFun{
 
 	    public static void main(String[] args) {
@@ -124,9 +128,18 @@ public class StringFun{
 			System.out.println("Enter an index to return the character at that index:");
 			int charAtThisIndex = readInt(scan);
 			System.out.println("Character at index " + charAtThisIndex + " is "+ subString.charAt(charAtThisIndex));
-			// s.toUpperCase() (Personal Pick 1)
+			/*
+			s.toUpperCase() (Personal Pick 1)
+			In my own words, this method parses through the input string for any lowercase characters, and returns
+			a string with all those characters returned in uppercase form. Does not alter whitespace, numbers, or
+			punctuation marks.
+			 */
 			System.out.println(subString + ".toUpperCase() = " + subString.toUpperCase());
-			// s.contains(CharSequence s) (Personal Pick 2)
+			// s.contains(CharSequence characterSequence) (Personal Pick 2)
+			/*
+			In my own words, this method returns a boolean reflecting whether or not the input parameter
+			characterSequence is contained within the original string s.
+			 */
 			System.out.println("Enter an CharSequence to return a boolean reflecting if it's contained in " + subString + " :");
 			String charSequenceWeAreChecking = scan.next();
 			System.out.println(subString.contains(charSequenceWeAreChecking));
@@ -136,8 +149,9 @@ public class StringFun{
 
 	/**
 	 *
-	 * @param scanner
-	 * @return
+	 * @param scanner The 'scanner' parameter is the module we are using to retrieve command line input.
+	 *                As can be seen in the earlier declaration: Scanner scan = new Scanner(System.in)
+	 * @return The readInt function below will return an integer.
 	 */
 	static int readInt(Scanner scanner) {
 		while(true) {
