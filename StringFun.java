@@ -62,7 +62,7 @@ public class StringFun{
 			System.out.println("length = " + otherString.length());
 			//  s.equals(otherString)
 			System.out.println("Enter a string to see if it equals " + otherString + ": ");
-			String comparisonString = scan.nextLine();
+			String comparisonString = scan.next();
 			if (otherString.equals(comparisonString)){
 				System.out.println("Strings are equal");
 			} else if (otherString != comparisonString) {
@@ -102,7 +102,7 @@ public class StringFun{
 			System.out.println("length = " + subString.length());
 			//  s.equals(otherString)
 			System.out.println("Enter a string to see if it equals " + subString + ": ");
-			String comparisonString = scan.nextLine();
+			String comparisonString = scan.next();
 			if (subString.equals(comparisonString)){
 				System.out.println("Strings are equal");
 			} else if (!subString.equals(comparisonString)) {
