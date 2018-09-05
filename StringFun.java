@@ -11,7 +11,6 @@ public class StringFun{
 		String s = args[0];
 		String otherString = args[1];
 		String subString = args[2];
-		System.out.println(args[2].length());
         System.out.println("The program will now print out the results of nine methods for each of the three input strings.");
 		System.out.println("------------------------------------------------------");
 		for (int i = 0; i < args.length; i++) {
