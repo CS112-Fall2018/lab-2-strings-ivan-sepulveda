@@ -3,9 +3,15 @@ import java.util.Scanner;
 /**
  * We are now about to introduce the public class StringFun. Where we will try nine different methods for three
  * strings entered to the script through the command line.
+ @version 1.0
+ @author Ivan Sepulveda
  */
 public class StringFun{
+		/**
+		#
+		@param args The parameters we are taking are three command line 
 
+		*/
 	    public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String s = args[0];
@@ -24,7 +30,7 @@ public class StringFun{
 			String comparisonString = scan.nextLine();
 			if (s.equals(comparisonString)){
 				System.out.println("Strings are equal");
-			} else if (s != comparisonString) {
+			} else {
 				System.out.println("Strings are not equal");
 			}
 			// s.substring(startIndex, endIndex)
@@ -47,9 +53,18 @@ public class StringFun{
 			System.out.println("Enter an index to return the character at that index:");
 			int charAtThisIndex = readInt(scan);
 			System.out.println("Character at index " + charAtThisIndex + " is "+ s.charAt(charAtThisIndex));
-			// s.toUpperCase() (Personal Pick 1)
+			/*
+			s.toUpperCase() (Personal Pick 1)
+			In my own words, this method parses through the input string for any lowercase characters, and returns
+			a string with all those characters returned in uppercase form. Does not alter whitespace, numbers, or
+			punctuation marks.
+			 */				
 			System.out.println(s + ".toUpperCase() = " + s.toUpperCase());
-			// s.contains(CharSequence s) (Personal Pick 2)
+			// s.contains(CharSequence characterSequence) (Personal Pick 2)
+			/*
+			In my own words, this method returns a boolean reflecting whether or not the input parameter
+			characterSequence is contained within the original string s.
+			 */			
 			System.out.println("Enter an CharSequence to return a boolean reflecting if it's contained in " + s + " :");
 			String charSequenceWeAreChecking = scan.next();
 			System.out.println(s.contains(charSequenceWeAreChecking));
@@ -87,9 +102,18 @@ public class StringFun{
 			System.out.println("Enter an index to return the character at that index:");
 			int charAtThisIndex = readInt(scan);
 			System.out.println("Character at index " + charAtThisIndex + " is "+ otherString.charAt(charAtThisIndex));
-			// s.toUpperCase() (Personal Pick 1)
+			/*
+			s.toUpperCase() (Personal Pick 1)
+			In my own words, this method parses through the input string for any lowercase characters, and returns
+			a string with all those characters returned in uppercase form. Does not alter whitespace, numbers, or
+			punctuation marks.
+			 */			
 			System.out.println(otherString + ".toUpperCase() = " + otherString.toUpperCase());
 			// s.contains(CharSequence s) (Personal Pick 2)
+			/*
+			In my own words, this method returns a boolean reflecting whether or not the input parameter
+			characterSequence is contained within the original string s.
+			 */
 			System.out.println("Enter an CharSequence to return a boolean reflecting if it's contained in " + otherString + " :");
 			String charSequenceWeAreChecking = scan.next();
 			System.out.println(otherString.contains(charSequenceWeAreChecking));
